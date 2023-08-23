@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "VladislavPanda\\FiledataArrayParser\\": "src/"
+            "VladislavPanda\\FileDataArrayParser\\": "src/"
         }
     },
     "authors": [
@@ -14,5 +14,7 @@
             "email": "pepartvlad7@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-fileinfo": "*"
+    }
 }
