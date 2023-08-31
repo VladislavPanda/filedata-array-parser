@@ -13,8 +13,14 @@ class BaseParser
      */
     protected static array $supportedExtensions = [
         '.json',
-        '.txt'
+        '.txt',
+        '.csv'
     ];
+
+    /**
+     * @var string
+     */
+    protected string $extension;
 
     /**
      * @var FileInfoReader
@@ -25,8 +31,9 @@ class BaseParser
 
     public function __construct(
         protected string $filePath,
-        protected string $extension
+        string $extension
     ) {
+        $this->extension = $extension ?? '';
         $this->fileInfoReader = new FileInfoReader($filePath, $extension);
     }
 }
